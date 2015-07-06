@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1" />
+        <link type="text/css" href="style.css" rel="stylesheet"/>
+        <script src="someScripts.js" type=text/javascript ></script>
+        <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="logoDiv">
+                <a href="index.html">
+                    <p class="logoP">m.H.a.</p>
+                </a>
+            </div>
+            <a href="view.html">
+                <button type="button" class="generateButton" id="viewButton" onclick="view.html">View Message</button>
+            </a>
+            <button type="button" class="generateButton" id="showMessageStuff" onclick="javascript:$('.formContent').removeAttr('style'); $('#showMessageStuff').remove(); $('#viewButton').remove();">New Message</button>
+        </br>
+        <div class="formContent" style="display:none">
+            <form action="connect.php" method="post" >
+                <input maxlength="6" type=text class="keyEntry" id="keyEntry" name="keyVar"/>
+                </br>
+                <input maxlength="6" type=text class="secretEntry" id="secretEntry" name="secretVar" />
+                </br>
+                <div class="messageTextAreaDiv">
+                    <textarea id="messageTextArea" class ="messageTextArea" name="messageVar"></textarea>
+                </div>
+                <button type="submit" class="generateButton" id="keyLoginButton">Enter</button>
+            </form>
+        </div>
+        
+        </div>
+        
+        <script>
+            var temp = document.getElementById('keyEntry').value;
+            if (temp.length <= 0)
+            {
+                document.getElementById('keyEntry').value = 'click generate';
+                document.getElementById('secretEntry').value = 'click generate';
+            }
+            else{
+            }
+            window.onload(generateKey());
+        </script>
+    </body>
+</html>

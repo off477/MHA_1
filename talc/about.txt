@@ -1,0 +1,22 @@
+there will be no login 
+only a key and secret shared between destinct users
+each user will recieve a randomly generated "key" 
+the key will be unique to EACH user
+Each conversation will have its own secret
+
+Description of Elements
+1) KEY -Random alphanumberic string. 6 characters long. A key is generated the first time a users opens the app.
+2) SECRET - Random alphanumberic string. 6 characters long. A secret is to start a new conversation with someone. 
+
+required:
+mySQL database
+Web space
+random key/secret genereation engine
+
+User is presented a webpage
+User recieves otiopn to :
+1) enter a key
+2) generate key
+
+A key is then matched to a users phone number. So if the user got a new device
+click "Generate Key"
